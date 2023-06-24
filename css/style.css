@@ -1,3 +1,6 @@
+@import "reset.css";
+@import "variables.css";
+
 .hidden {
   display: none;
 }
@@ -17,25 +20,143 @@ img {
 body {
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
+.firstColumn {
+  display: flex;
+  flex-direction: column;
+  width: 67%;
+  height: 100vh;
+}
+
+.firstColumn_row {
+  height: 33%;
+}
+
+.firstColumn_row:first-child {
+  display: flex;
+  margin-left: 15px;
+}
+
+.firstColumn_top_left {
+  width: 50%;
+}
+
 #clock {
   color: whitesmoke;
-  font-size: 150px;
-  margin: 0;
+  font-size: 70px;
+  margin-top: 10px;
+  text-shadow: var(--text-line);
+}
+
+#weather {
+  color: whitesmoke;
+  font-size: 20px;
+  text-shadow: var(--text-line);
+  margin: 15px 0 0 10px;
+}
+
+.firstColumn_top_right {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+#login-form {
+  margin-top: 15px;
+}
+
+#login-form input {
+  border-radius: 6px;
+  height: 25px;
+}
+
+#login-form input:first-child {
+  padding-left: 10px;
+}
+
+.firstColumn_row:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #greeting {
   color: whitesmoke;
+  font-size: 100px;
+  text-shadow: var(--text-line);
+}
+
+.firstColumn_row:last-child {
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #quote {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   color: white;
+  font-size: 20px;
+  text-shadow: var(--text-line);
+}
+
+#quote span:first-child {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+#quote span:last-child {
+  margin-top: 20px;
+}
+
+.secondColumn {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  margin-left: 8%;
+  width: 25%;
+  height: 100vh;
+}
+
+#todo-form input {
+  margin-top: 20px;
+  height: 25px;
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+#todo-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#todo-list li span {
+  color: whitesmoke;
+  font-size: 20px;
+  border-radius: 7px;
+  text-shadow: var(--text-line);
+}
+
+#todo-list li button {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background-color: white;
 }
